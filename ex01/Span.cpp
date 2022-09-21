@@ -6,7 +6,7 @@
 /*   By: gclausse <gclausse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:48:48 by gclausse          #+#    #+#             */
-/*   Updated: 2022/09/21 17:27:50 by gclausse         ###   ########.fr       */
+/*   Updated: 2022/09/21 17:57:35 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,7 @@ int	Span::longestSpan()
 
 	return (max_val - min_val);
 }
+
 
 
 const char * Span::CantAdd::what()  const throw() {
