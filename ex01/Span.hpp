@@ -6,7 +6,7 @@
 /*   By: gclausse <gclausse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:48:32 by gclausse          #+#    #+#             */
-/*   Updated: 2022/09/21 18:47:23 by gclausse         ###   ########.fr       */
+/*   Updated: 2022/09/22 11:52:53 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,13 +50,7 @@ class Span
 		void addNumber(int num);
 		int	shortestSpan();
 		int	longestSpan();
-
-		void        addLargeNumber()
-		{
-			srand( time(NULL) );
-    		std::fill_n(std::back_inserter(vec), _size, (rand() % 100000));
-		}
-		
+				
 		class CantSpan : public std::exception
 		{
 		public:
