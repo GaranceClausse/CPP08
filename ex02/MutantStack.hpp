@@ -6,7 +6,7 @@
 /*   By: gclausse <gclausse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 12:19:07 by gclausse          #+#    #+#             */
-/*   Updated: 2022/09/22 15:12:02 by gclausse         ###   ########.fr       */
+/*   Updated: 2022/09/22 15:17:16 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@
 template <typename T>
 class MutantStack : public std::stack<T>
 {
-	private:
-		/* data */
 	public:
 		MutantStack() {};
 		virtual ~MutantStack() {};
@@ -54,12 +52,12 @@ class MutantStack : public std::stack<T>
 
 		iterator                begin() { return (this->c.begin());}
         iterator                end() { return (this->c.end());}
-        const_iterator          begin() const { return (this->c.begin());}
-        const_iterator          end() const { return (this->c.end());}
+        const_iterator          cbegin() const { return (this->c.cbegin());}
+        const_iterator          cend() const { return (this->c.cend());}
         reverse_iterator        rbegin() { return (this->c.rbegin());}
         reverse_iterator        rend() { return (this->c.rend());}
-        const_reverse_iterator  rbegin() const { return (this->c.rbegin());}
-        const_reverse_iterator  rend() const { return (this->c.rend());}
+        const_reverse_iterator  rcbegin() const { return (this->c.rcbegin());}
+        const_reverse_iterator  rcend() const { return (this->c.rcend());}
 
 		 
 };

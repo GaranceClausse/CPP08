@@ -6,7 +6,7 @@
 /*   By: gclausse <gclausse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:49:01 by gclausse          #+#    #+#             */
-/*   Updated: 2022/09/22 12:12:05 by gclausse         ###   ########.fr       */
+/*   Updated: 2022/09/22 15:26:07 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ std::vector<int>    createRandomVector(unsigned int nb)
 int main()
 {
 
-	std::cout << "Example form the subject" << std::endl << std::endl;
+	std::cout << "Example form the subject with a container of size 5 filled with 6, 3, 17, 9, 11" << std::endl << std::endl;
 	Span sp = Span(5);
 
 	try
@@ -44,8 +44,8 @@ int main()
 		std::cerr << COLOR RED << e.what() << COLOR RESET << std::endl << std::endl;	}
 	try
 	{
-		std::cout << sp.longestSpan() << std::endl;
-		std::cout << sp.shortestSpan() << std::endl;
+		std::cout << "Longest span : "<< sp.longestSpan() << std::endl;
+		std::cout << "Shortest span : " << sp.shortestSpan() << std::endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -56,7 +56,8 @@ int main()
 	std::cout << "**********************************************************" << std::endl;
 	std::cout << std::endl;
 	std::cout << "Now let's show that it's not possible to add more than N elements" << std::endl << std::endl;
-	
+	std::cout << "Example with a container of size 2 filled with 6, 3, 17, 9, 11" << std::endl << std::endl;
+
 	Span sp2 = Span(2);
 	try
 	{
@@ -71,8 +72,8 @@ int main()
 		std::cerr << COLOR RED << e.what() << COLOR RESET << std::endl << std::endl;	}
 	try
 	{
-		std::cout << sp2.longestSpan() << std::endl;
-		std::cout << sp2.shortestSpan() << std::endl;
+		std::cout << "Longest span : "<< sp2.longestSpan() << std::endl;
+		std::cout << "Shortest span : " << sp2.shortestSpan() << std::endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -82,7 +83,7 @@ int main()
 	std::cout << std::endl;
 	std::cout << "**********************************************************" << std::endl;
 	std::cout << std::endl;
-	std::cout << "Now let's try with a big container randomly and dumly filled" << std::endl << std::endl;
+	std::cout << "Now let's try with a big container of size 10 000 randomly and dumbly filled" << std::endl << std::endl;
 	
 	Span sp3 = Span(10000);
 	try
@@ -95,8 +96,8 @@ int main()
 		std::cerr << COLOR RED << e.what() << COLOR RESET << std::endl << std::endl;	}
 	try
 	{
-		std::cout << sp3.longestSpan() << std::endl;
-		std::cout << sp3.shortestSpan() << std::endl;
+		std::cout << "Longest span : "<<sp3.longestSpan() << std::endl;
+		std::cout << "Shortest span : " << sp3.shortestSpan() << std::endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -105,7 +106,7 @@ int main()
 	std::cout << std::endl;
 	std::cout << "**********************************************************" << std::endl;
 	std::cout << std::endl;
-	std::cout << "Now let's try with a supeeeeer big container randomly and cleverly filled" << std::endl << std::endl;
+	std::cout << "Now let's try with a supeeeeer big container of size 50 000 randomly and cleverly filled" << std::endl << std::endl;
 	
 	
 	std::srand(time(NULL));
@@ -115,7 +116,7 @@ int main()
 
     try
     {
-        std::cout << sp_superlong.longestSpan() << std::endl;
+        std::cout << "Longest span : "<< sp_superlong.longestSpan() << std::endl;
     }
         catch(const std::exception& e)
     {
@@ -124,7 +125,7 @@ int main()
 
     try
     {
-        std::cout << sp_superlong.shortestSpan() << std::endl;
+        std::cout << "Shortest span : " << sp_superlong.shortestSpan() << std::endl;
     }
         catch(const std::exception& e)
     {

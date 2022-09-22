@@ -6,7 +6,7 @@
 /*   By: gclausse <gclausse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:48:48 by gclausse          #+#    #+#             */
-/*   Updated: 2022/09/21 17:57:35 by gclausse         ###   ########.fr       */
+/*   Updated: 2022/09/22 15:20:29 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 Span::Span()
 {
-	std::cout <<"Default constructor called" << std::endl;
+	//std::cout <<"Default constructor called" << std::endl;
 }
 
 Span::Span(unsigned int N) : _size(N), _fill(0)
 {
-	std::cout <<"Param constructor called" << std::endl;
+	//std::cout <<"Param constructor called" << std::endl;
 }
 
 Span::Span(const Span &copy)
@@ -47,7 +47,7 @@ Span&	Span::operator=(Span const& copy)
 
 Span::~Span()
 {
-	std::cout <<"Destructor called" << std::endl;
+	//std::cout <<"Destructor called" << std::endl;
 
 }
 
