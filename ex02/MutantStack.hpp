@@ -6,7 +6,7 @@
 /*   By: gclausse <gclausse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 12:19:07 by gclausse          #+#    #+#             */
-/*   Updated: 2022/09/22 14:19:44 by gclausse         ###   ########.fr       */
+/*   Updated: 2022/09/22 15:12:02 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,17 @@ class MutantStack : public std::stack<T>
 	public:
 		MutantStack() {};
 		virtual ~MutantStack() {};
+        MutantStack(const MutantStack& copy) { *this = copy; }
+		MutantStack &operator=(MutantStack const &copy) {
+            if (*this != copy)
+                 static_cast< std::stack<T> >(*this) = static_cast< std::stack<T> >(copy);
+            return *this;
+        }
 		
-		typedef T stored_e_type;
-		typedef typename std::stack<stored_e_type>::container_type container_type;
-
-		typedef typename container_type::iterator               iterator;
-        typedef typename container_type::const_iterator         const_iterator;
-        typedef typename container_type::reverse_iterator       reverse_iterator;
-        typedef typename container_type::const_reverse_iterator const_reverse_iterator;
+		typedef typename std::stack<T>::container_type::iterator               iterator;
+        typedef typename std::stack<T>::container_type::const_iterator         const_iterator;
+        typedef typename std::stack<T>::container_type::reverse_iterator       reverse_iterator;
+        typedef typename std::stack<T>::container_type::const_reverse_iterator const_reverse_iterator;
 
 		iterator                begin() { return (this->c.begin());}
         iterator                end() { return (this->c.end());}
@@ -61,13 +64,3 @@ class MutantStack : public std::stack<T>
 		 
 };
 
-
-
-
-
-
-
-
-
-
-#include "MutantStack.tpp"
